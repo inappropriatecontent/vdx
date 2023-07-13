@@ -1,0 +1,4105 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-airplay-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaAirplayButton",
+          "slots": [
+            {
+              "name": "airplay"
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "CustomEvent"
+              },
+              "name": "mediaairplayrequest"
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "(unavailable|unsupported)"
+              },
+              "name": "media-airplay-unavailable"
+            },
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-airplay-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-airplay-button",
+          "declaration": {
+            "name": "MediaAirplayButton",
+            "module": "src/js/media-airplay-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaAirplayButton",
+            "module": "src/js/media-airplay-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-captions-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaCaptionsButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_captionsReady",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "no-subtitles-fallback"
+            },
+            {
+              "name": "default-showing"
+            },
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-captions-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-captions-button",
+          "declaration": {
+            "name": "MediaCaptionsButton",
+            "module": "src/js/media-captions-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaCaptionsButton",
+            "module": "src/js/media-captions-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-cast-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaCastButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-cast-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-cast-button",
+          "declaration": {
+            "name": "MediaCastButton",
+            "module": "src/js/media-cast-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaCastButton",
+            "module": "src/js/media-cast-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-chrome-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaChromeButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "enable"
+            },
+            {
+              "kind": "method",
+              "name": "disable"
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed"
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-chrome-button.js"
+          },
+          "tagName": "media-chrome-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-chrome-button",
+          "declaration": {
+            "name": "MediaChromeButton",
+            "module": "src/js/media-chrome-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaChromeButton",
+            "module": "src/js/media-chrome-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-chrome-range.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaChromeRange",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#thumbWidth",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusIn",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusOut",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "updatePointerBar",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "updateBar"
+            },
+            {
+              "kind": "method",
+              "name": "getBarColors"
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed"
+            },
+            {
+              "kind": "field",
+              "name": "container"
+            },
+            {
+              "kind": "field",
+              "name": "range",
+              "type": {
+                "text": "Omit<HTMLInputElement, \"value\" | \"min\" | \"max\"> &\n      * {value: number, min: number, max: number}"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled"
+            },
+            {
+              "name": "aria-disabled"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-chrome-range.js"
+          },
+          "tagName": "media-chrome-range",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-chrome-range",
+          "declaration": {
+            "name": "MediaChromeRange",
+            "module": "src/js/media-chrome-range.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaChromeRange",
+            "module": "src/js/media-chrome-range.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-container.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaContainer",
+          "members": [
+            {
+              "kind": "field",
+              "name": "media",
+              "return": {
+                "type": {
+                  "text": "HTMLVideoElement &\n   * {buffered,\n   * webkitEnterFullscreen?,\n   * webkitExitFullscreen?,\n   * requestCast?,\n   * webkitShowPlaybackTargetPicker?,\n   * }"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "mediaSetCallback",
+              "parameters": [
+                {
+                  "name": "media"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMediaUpdated",
+              "parameters": [
+                {
+                  "name": "media"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "mediaUnsetCallback",
+              "parameters": [
+                {
+                  "name": "node"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "autohide"
+            },
+            {
+              "kind": "field",
+              "name": "resizeObserver",
+              "default": "new ResizeObserver(resizeCallback)"
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-container.js"
+          },
+          "tagName": "media-container-temp",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-container-temp",
+          "declaration": {
+            "name": "MediaContainer",
+            "module": "src/js/media-container.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaContainer",
+            "module": "src/js/media-container.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-control-bar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaControlBar",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-control-bar.js"
+          },
+          "tagName": "media-control-bar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-control-bar",
+          "declaration": {
+            "name": "MediaControlBar",
+            "module": "src/js/media-control-bar.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaControlBar",
+            "module": "src/js/media-control-bar.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-controller.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Media Controller should not mimic the HTMLMediaElement API.",
+          "name": "MediaController",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#hotKeys",
+              "privacy": "private",
+              "default": "new AttributeTokenList(this, 'hotkeys')"
+            },
+            {
+              "kind": "field",
+              "name": "#fullscreenElement",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "fullscreenElement"
+            },
+            {
+              "kind": "method",
+              "name": "mediaSetCallback",
+              "parameters": [
+                {
+                  "name": "media"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "mediaUnsetCallback",
+              "parameters": [
+                {
+                  "name": "media"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "propagateMediaState",
+              "parameters": [
+                {
+                  "name": "stateName"
+                },
+                {
+                  "name": "state"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "associateElement",
+              "parameters": [
+                {
+                  "name": "element"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "unassociateElement",
+              "parameters": [
+                {
+                  "name": "element"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "registerMediaStateReceiver",
+              "parameters": [
+                {
+                  "name": "el"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "unregisterMediaStateReceiver",
+              "parameters": [
+                {
+                  "name": "el"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#keyUpHandler",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "#keyDownHandler",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "enableHotkeys"
+            },
+            {
+              "kind": "method",
+              "name": "disableHotkeys"
+            },
+            {
+              "kind": "field",
+              "name": "hotkeys"
+            },
+            {
+              "kind": "method",
+              "name": "keyboardShortcutHandler",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "mediaStateReceivers",
+              "type": {
+                "text": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "associatedElementSubscriptions",
+              "default": "new Map()"
+            },
+            {
+              "kind": "field",
+              "name": "_mediaStatePropagators",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      'play,pause,emptied': () => {\n        this.propagateMediaState(MediaUIAttributes.MEDIA_PAUSED, getPaused(this));\n      },\n      'playing,emptied': () => {\n        // We want to let the user know that the media started playing at any point (`media-has-played`).\n        // Since these propagators are all called when boostrapping state, let's verify this is\n        // a real playing event by checking that 1) there's media and 2) it isn't currently paused.\n        this.propagateMediaState(MediaUIAttributes.MEDIA_HAS_PLAYED, !this.media?.paused);\n      },\n      volumechange: () => {\n        this.propagateMediaState(MediaUIAttributes.MEDIA_MUTED, getMuted(this));\n        this.propagateMediaState(MediaUIAttributes.MEDIA_VOLUME, getVolume(this));\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_VOLUME_LEVEL,\n          getVolumeLevel(this)\n        );\n      },\n      [fullscreenApi.event]: (e) => {\n        // Safari doesn't support ShadowRoot.fullscreenElement and document.fullscreenElement\n        // could be several ancestors up the tree. Use event.target instead.\n        const isSomeElementFullscreen = !!document[fullscreenApi.element];\n        const fullscreenEl = isSomeElementFullscreen && e?.target;\n        const isFullScreen = containsComposedNode(this.fullscreenElement, fullscreenEl);\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_IS_FULLSCREEN,\n          isFullScreen\n        );\n      },\n      'enterpictureinpicture,leavepictureinpicture': (e) => {\n        let isPip;\n\n        // Rely on event type for state first\n        // in case this doesn't work well for custom elements using internal <video>\n        if (e) {\n          isPip = e.type == 'enterpictureinpicture';\n        } else {\n          const pipElement =\n            // @ts-ignore\n            this.getRootNode().pictureInPictureElement ??\n            document.pictureInPictureElement;\n          isPip = this.media && containsComposedNode(this.media, pipElement);\n        }\n        this.propagateMediaState(MediaUIAttributes.MEDIA_IS_PIP, isPip);\n      },\n      // Note this relies on a customized video[is=castable-video] element.\n      'entercast,leavecast,castchange': (e) => {\n        const castElement = globalThis.CastableVideoElement?.castElement;\n        let castState = this.media && containsComposedNode(this.media, castElement);\n\n        // While the cast is connecting set media-is-cast=\"connecting\"\n        if (e?.type === 'castchange' && e?.detail === 'CONNECTING') {\n          castState = 'connecting';\n        }\n\n        this.propagateMediaState(MediaUIAttributes.MEDIA_IS_CASTING, castState);\n      },\n      'timeupdate,loadedmetadata': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_CURRENT_TIME,\n          getCurrentTime(this)\n        );\n      },\n      'durationchange,loadedmetadata,emptied': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_DURATION,\n          getDuration(this)\n        );\n      },\n      'emptied,durationchange,loadedmetadata,streamtypechange': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_STREAM_TYPE\n        );\n      },\n      'emptied,durationchange,loadedmetadata,streamtypechange,targetlivewindowchange': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_TARGET_LIVE_WINDOW\n        );\n      },\n      'loadedmetadata,emptied,progress': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_SEEKABLE,\n          getSeekable(this)?.join(':')\n        );\n      },\n      'progress,emptied': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_BUFFERED,\n          serializeTimeRanges(this.media?.buffered)\n        );\n      },\n      'ratechange,loadstart': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_PLAYBACK_RATE,\n          getPlaybackRate(this)\n        );\n      },\n      'waiting,playing,emptied': () => {\n        const isLoading = this.media?.readyState < 3;\n        this.propagateMediaState(MediaUIAttributes.MEDIA_LOADING, isLoading);\n      },\n      'playing,timeupdate,progress,waiting,emptied': () => {\n        this.propagateMediaState(MediaUIAttributes.MEDIA_TIME_IS_LIVE);\n      },\n    }"
+            },
+            {
+              "kind": "field",
+              "name": "_textTrackMediaStatePropagators",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      'addtrack,removetrack,loadstart': () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_CAPTIONS_LIST,\n          stringifyTextTrackList(getCaptionTracks(this)) || undefined\n        );\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_SUBTITLES_LIST,\n          stringifyTextTrackList(getSubtitleTracks(this)) || undefined\n        );\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_CAPTIONS_SHOWING,\n          stringifyTextTrackList(getShowingCaptionTracks(this)) || undefined\n        );\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_SUBTITLES_SHOWING,\n          stringifyTextTrackList(getShowingSubtitleTracks(this)) || undefined\n        );\n      },\n      change: () => {\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_CAPTIONS_SHOWING,\n          stringifyTextTrackList(getShowingCaptionTracks(this)) || undefined\n        );\n        this.propagateMediaState(\n          MediaUIAttributes.MEDIA_SUBTITLES_SHOWING,\n          stringifyTextTrackList(getShowingSubtitleTracks(this)) || undefined\n        );\n      },\n    }"
+            },
+            {
+              "kind": "field",
+              "name": "media",
+              "return": {
+                "type": {
+                  "text": "HTMLVideoElement &\n   * {buffered,\n   * webkitEnterFullscreen?,\n   * webkitExitFullscreen?,\n   * requestCast?,\n   * webkitShowPlaybackTargetPicker?,\n   * }"
+                }
+              },
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "handleMediaUpdated",
+              "parameters": [
+                {
+                  "name": "media"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "autohide",
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "resizeObserver",
+              "default": "new ResizeObserver(resizeCallback)",
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {},
+              "inheritedFrom": {
+                "name": "MediaContainer",
+                "module": "src/js/media-container.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaContainer",
+            "module": "/src/js/media-container.js"
+          },
+          "tagName": "media-controller",
+          "customElement": true
+        },
+        {
+          "kind": "function",
+          "name": "getTestMediaEl"
+        },
+        {
+          "kind": "function",
+          "name": "hasVolumeSupportAsync",
+          "parameters": [
+            {
+              "name": "mediaEl",
+              "default": "getTestMediaEl()"
+            }
+          ]
+        },
+        {
+          "kind": "function",
+          "name": "delay",
+          "parameters": [
+            {
+              "name": "ms",
+              "type": {
+                "text": "number"
+              }
+            }
+          ],
+          "description": "Returns a promise that will resolve after passed ms.",
+          "return": {
+            "type": {
+              "text": "Promise"
+            }
+          }
+        },
+        {
+          "kind": "function",
+          "name": "hasPipSupport",
+          "parameters": [
+            {
+              "name": "mediaEl",
+              "default": "getTestMediaEl()"
+            }
+          ]
+        },
+        {
+          "kind": "function",
+          "name": "hasFullscreenSupport",
+          "parameters": [
+            {
+              "name": "mediaEl",
+              "default": "getTestMediaEl()"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "getTestMediaEl",
+          "declaration": {
+            "name": "getTestMediaEl",
+            "module": "src/js/media-controller.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "hasVolumeSupportAsync",
+          "declaration": {
+            "name": "hasVolumeSupportAsync",
+            "module": "src/js/media-controller.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "delay",
+          "declaration": {
+            "name": "delay",
+            "module": "src/js/media-controller.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "hasPipSupport",
+          "declaration": {
+            "name": "hasPipSupport",
+            "module": "src/js/media-controller.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "hasFullscreenSupport",
+          "declaration": {
+            "name": "hasFullscreenSupport",
+            "module": "src/js/media-controller.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "media-controller",
+          "declaration": {
+            "name": "MediaController",
+            "module": "src/js/media-controller.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaController",
+            "module": "src/js/media-controller.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-current-time-display.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaCurrentTimeDisplay",
+          "members": [
+            {
+              "kind": "field",
+              "name": "innerHTML"
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaTextDisplay",
+            "module": "/src/js/media-text-display.js"
+          },
+          "tagName": "media-current-time-display",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-current-time-display",
+          "declaration": {
+            "name": "MediaCurrentTimeDisplay",
+            "module": "src/js/media-current-time-display.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaCurrentTimeDisplay",
+            "module": "src/js/media-current-time-display.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-duration-display.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaDurationDisplay",
+          "members": [
+            {
+              "kind": "field",
+              "name": "innerHTML"
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaTextDisplay",
+            "module": "/src/js/media-text-display.js"
+          },
+          "tagName": "media-duration-display",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-duration-display",
+          "declaration": {
+            "name": "MediaDurationDisplay",
+            "module": "src/js/media-duration-display.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaDurationDisplay",
+            "module": "src/js/media-duration-display.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-fullscreen-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaFullscreenButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-fullscreen-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-fullscreen-button",
+          "declaration": {
+            "name": "MediaFullscreenButton",
+            "module": "src/js/media-fullscreen-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaFullscreenButton",
+            "module": "src/js/media-fullscreen-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-gesture-receiver.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaGestureReceiver",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleEvent",
+              "parameters": [
+                {
+                  "name": "event"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleTap",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMouseClick",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML"
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-gesture-receiver.js"
+          },
+          "tagName": "media-gesture-receiver",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-gesture-receiver",
+          "declaration": {
+            "name": "MediaGestureReceiver",
+            "module": "src/js/media-gesture-receiver.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaGestureReceiver",
+            "module": "src/js/media-gesture-receiver.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-live-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaLiveButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "MEDIA_SEEK_TO_LIVE_REQUEST",
+              "type": {}
+            },
+            {
+              "name": "MEDIA_PLAY_REQUEST",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-live-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-live-button",
+          "declaration": {
+            "name": "MediaLiveButton",
+            "module": "src/js/media-live-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaLiveButton",
+            "module": "src/js/media-live-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-loading-indicator.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaLoadingIndicator",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "loading-delay"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-loading-indicator.js"
+          },
+          "tagName": "media-loading-indicator",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-loading-indicator",
+          "declaration": {
+            "name": "MediaLoadingIndicator",
+            "module": "src/js/media-loading-indicator.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaLoadingIndicator",
+            "module": "src/js/media-loading-indicator.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-mute-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaMuteButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-mute-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-mute-button",
+          "declaration": {
+            "name": "MediaMuteButton",
+            "module": "src/js/media-mute-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaMuteButton",
+            "module": "src/js/media-mute-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-pip-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaPipButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-pip-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-pip-button",
+          "declaration": {
+            "name": "MediaPipButton",
+            "module": "src/js/media-pip-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaPipButton",
+            "module": "src/js/media-pip-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-play-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaPlayButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "eventName",
+              "type": {}
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-play-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-play-button",
+          "declaration": {
+            "name": "MediaPlayButton",
+            "module": "src/js/media-play-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaPlayButton",
+            "module": "src/js/media-play-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-playback-rate-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaPlaybackRateButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_rates",
+              "default": "[1, 1.25, 1.5, 1.75, 2]",
+              "type": {
+                "text": "array"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container"
+            },
+            {
+              "kind": "field",
+              "name": "innerHTML",
+              "default": "`${DEFAULT_RATE}x`"
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "rates"
+            },
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-playback-rate-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-playback-rate-button",
+          "declaration": {
+            "name": "MediaPlaybackRateButton",
+            "module": "src/js/media-playback-rate-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaPlaybackRateButton",
+            "module": "src/js/media-playback-rate-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-poster-image.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaPosterImage",
+          "members": [
+            {
+              "kind": "field",
+              "name": "image"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "placeholder-src"
+            },
+            {
+              "name": "src"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-poster-image.js"
+          },
+          "tagName": "media-poster-image",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-poster-image",
+          "declaration": {
+            "name": "MediaPosterImage",
+            "module": "src/js/media-poster-image.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaPosterImage",
+            "module": "src/js/media-poster-image.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-preview-thumbnail.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaPreviewThumbnail",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "update"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "time"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-preview-thumbnail.js"
+          },
+          "tagName": "media-preview-thumbnail",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-preview-thumbnail",
+          "declaration": {
+            "name": "MediaPreviewThumbnail",
+            "module": "src/js/media-preview-thumbnail.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaPreviewThumbnail",
+            "module": "src/js/media-preview-thumbnail.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-preview-time-display.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaPreviewTimeDisplay",
+          "superclass": {
+            "name": "MediaTextDisplay",
+            "module": "/src/js/media-text-display.js"
+          },
+          "tagName": "media-preview-time-display",
+          "customElement": true,
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-preview-time-display",
+          "declaration": {
+            "name": "MediaPreviewTimeDisplay",
+            "module": "src/js/media-preview-time-display.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaPreviewTimeDisplay",
+            "module": "src/js/media-preview-time-display.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-progress-range.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaProgressRange",
+          "superclass": {
+            "name": "MediaTimeRange",
+            "module": "/src/js/media-time-range.js"
+          },
+          "tagName": "media-progress-range",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "thumbnails",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "name": "aria-disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "#boxes",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#previewBox",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#currentBox",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#boxPaddingLeft",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#boxPaddingRight",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaPaused",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaLoading",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaDuration",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaCurrentTime",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaPlaybackRate",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaBuffered",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekable",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekableEnd",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekableStart",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getBarColors",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updateCurrentBox",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#getBoxPosition",
+              "parameters": [
+                {
+                  "name": "box"
+                },
+                {
+                  "name": "ratio"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#pointermoveHandler",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#rangeEntered",
+              "privacy": "private",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#offRangeHandler",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#trackMouse",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#stopTrackingMouse",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#rangepointermoveHandler",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#enableBoxes",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#disableBoxes",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_refreshBar",
+              "inheritedFrom": {
+                "name": "MediaTimeRange",
+                "module": "src/js/media-time-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#thumbWidth",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusIn",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusOut",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updatePointerBar",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updateBar",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "range",
+              "type": {
+                "text": "Omit<HTMLInputElement, \"value\" | \"min\" | \"max\"> &\n      * {value: number, min: number, max: number}"
+              },
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-progress-range",
+          "declaration": {
+            "name": "MediaProgressRange",
+            "module": "src/js/media-progress-range.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaProgressRange",
+            "module": "src/js/media-progress-range.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-seek-backward-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaSeekBackwardButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-seek-backward-button",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-seek-backward-button",
+          "declaration": {
+            "name": "MediaSeekBackwardButton",
+            "module": "src/js/media-seek-backward-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaSeekBackwardButton",
+            "module": "src/js/media-seek-backward-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-seek-forward-button.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaSeekForwardButton",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "e",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "preventClick",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#clickListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keyupListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#keydownListener",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "enable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "disable",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "nativeEl",
+              "default": "buttonHTML",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "seek-offset"
+            },
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeButton",
+                "module": "src/js/media-chrome-button.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeButton",
+            "module": "/src/js/media-chrome-button.js"
+          },
+          "tagName": "media-seek-forward-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-seek-forward-button",
+          "declaration": {
+            "name": "MediaSeekForwardButton",
+            "module": "src/js/media-seek-forward-button.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaSeekForwardButton",
+            "module": "src/js/media-seek-forward-button.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-settings-popup.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaSettingsPopup",
+          "superclass": {
+            "module": "src/js/media-settings-popup.js"
+          },
+          "tagName": "media-settings-popup",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-settings-popup",
+          "declaration": {
+            "name": "MediaSettingsPopup",
+            "module": "src/js/media-settings-popup.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaSettingsPopup",
+            "module": "src/js/media-settings-popup.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-text-display.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaTextDisplay",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "container"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-text-display.js"
+          },
+          "tagName": "media-text-display",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-text-display",
+          "declaration": {
+            "name": "MediaTextDisplay",
+            "module": "src/js/media-text-display.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaTextDisplay",
+            "module": "src/js/media-text-display.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-theme-element.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaThemeElement",
+          "members": [
+            {
+              "kind": "field",
+              "name": "template",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "processor",
+              "static": true,
+              "default": "processor"
+            },
+            {
+              "kind": "field",
+              "name": "renderRoot"
+            },
+            {
+              "kind": "field",
+              "name": "renderer"
+            },
+            {
+              "kind": "field",
+              "name": "#template",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#prevTemplate",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#upgradeProperty",
+              "parameters": [
+                {
+                  "name": "prop"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "mediaController"
+            },
+            {
+              "kind": "field",
+              "name": "template"
+            },
+            {
+              "kind": "field",
+              "name": "props"
+            },
+            {
+              "kind": "method",
+              "name": "createRenderer"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "template"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/media-theme-element.js"
+          },
+          "tagName": "media-theme",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./utils/template-parts.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "MediaThemeElement",
+          "declaration": {
+            "name": "MediaThemeElement",
+            "module": "src/js/media-theme-element.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "media-theme",
+          "declaration": {
+            "name": "MediaThemeElement",
+            "module": "src/js/media-theme-element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-time-display.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaTimeDisplay",
+          "members": [
+            {
+              "kind": "method",
+              "name": "enable"
+            },
+            {
+              "kind": "method",
+              "name": "disable"
+            },
+            {
+              "kind": "field",
+              "name": "mediaDuration"
+            },
+            {
+              "kind": "field",
+              "name": "mediaCurrentTime"
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekable"
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekableEnd"
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekableStart"
+            },
+            {
+              "kind": "field",
+              "name": "innerHTML"
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaTextDisplay",
+                "module": "src/js/media-text-display.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "remaining"
+            },
+            {
+              "name": "show-duration"
+            },
+            {
+              "name": "disabled"
+            }
+          ],
+          "superclass": {
+            "name": "MediaTextDisplay",
+            "module": "/src/js/media-text-display.js"
+          },
+          "tagName": "media-time-display",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-time-display",
+          "declaration": {
+            "name": "MediaTimeDisplay",
+            "module": "src/js/media-time-display.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaTimeDisplay",
+            "module": "src/js/media-time-display.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-time-range.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaTimeRange",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#boxes",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#previewBox",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#currentBox",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#boxPaddingLeft",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#boxPaddingRight",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "mediaPaused"
+            },
+            {
+              "kind": "field",
+              "name": "mediaLoading"
+            },
+            {
+              "kind": "field",
+              "name": "mediaDuration"
+            },
+            {
+              "kind": "field",
+              "name": "mediaCurrentTime"
+            },
+            {
+              "kind": "field",
+              "name": "mediaPlaybackRate"
+            },
+            {
+              "kind": "field",
+              "name": "mediaBuffered"
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekable"
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekableEnd"
+            },
+            {
+              "kind": "field",
+              "name": "mediaSeekableStart"
+            },
+            {
+              "kind": "method",
+              "name": "getBarColors",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updateCurrentBox"
+            },
+            {
+              "kind": "method",
+              "name": "#getBoxPosition",
+              "parameters": [
+                {
+                  "name": "box"
+                },
+                {
+                  "name": "ratio"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "#pointermoveHandler",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#rangeEntered",
+              "privacy": "private",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "#offRangeHandler",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#trackMouse",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#stopTrackingMouse",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "#rangepointermoveHandler",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "#enableBoxes"
+            },
+            {
+              "kind": "method",
+              "name": "#disableBoxes"
+            },
+            {
+              "kind": "field",
+              "name": "_refreshBar"
+            },
+            {
+              "kind": "field",
+              "name": "#thumbWidth",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusIn",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusOut",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updatePointerBar",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updateBar",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "range",
+              "type": {
+                "text": "Omit<HTMLInputElement, \"value\" | \"min\" | \"max\"> &\n      * {value: number, min: number, max: number}"
+              },
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "thumbnails"
+            },
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "name": "aria-disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeRange",
+            "module": "/src/js/media-chrome-range.js"
+          },
+          "tagName": "media-time-range",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-time-range",
+          "declaration": {
+            "name": "MediaTimeRange",
+            "module": "src/js/media-time-range.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaTimeRange",
+            "module": "src/js/media-time-range.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-title-element.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaTitleBar",
+          "superclass": {
+            "module": "src/js/media-title-element.js"
+          },
+          "tagName": "media-title-bar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-title-bar",
+          "declaration": {
+            "name": "MediaTitleBar",
+            "module": "src/js/media-title-element.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaTitleBar",
+            "module": "src/js/media-title-element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/media-volume-range.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaVolumeRange",
+          "members": [
+            {
+              "kind": "field",
+              "name": "max",
+              "default": "100",
+              "type": {
+                "text": "number"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#thumbWidth",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#mediaController",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusIn",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "#onFocusOut",
+              "privacy": "private",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updatePointerBar",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ],
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "updateBar",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "getBarColors",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "keysUsed",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "container",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "range",
+              "type": {
+                "text": "Omit<HTMLInputElement, \"value\" | \"min\" | \"max\"> &\n      * {value: number, min: number, max: number}"
+              },
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "MediaChromeRange",
+            "module": "/src/js/media-chrome-range.js"
+          },
+          "tagName": "media-volume-range",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            },
+            {
+              "name": "aria-disabled",
+              "inheritedFrom": {
+                "name": "MediaChromeRange",
+                "module": "src/js/media-chrome-range.js"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-volume-range",
+          "declaration": {
+            "name": "MediaVolumeRange",
+            "module": "src/js/media-volume-range.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaVolumeRange",
+            "module": "src/js/media-volume-range.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/js/extras/media-clip-selector/index.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MediaClipSelector",
+          "members": [
+            {
+              "kind": "field",
+              "name": "mediaDuration"
+            },
+            {
+              "kind": "field",
+              "name": "mediaCurrentTime"
+            },
+            {
+              "kind": "method",
+              "name": "getPlayheadBasedOnMouseEvent",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getXPositionFromMouse",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getMousePercent",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "dragStart",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "dragEnd"
+            },
+            {
+              "kind": "method",
+              "name": "setSelectionWidth",
+              "parameters": [
+                {
+                  "name": "selectionPercent"
+                },
+                {
+                  "name": "fullTimelineWidth"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "drag",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "dispatchUpdate"
+            },
+            {
+              "kind": "method",
+              "name": "getCurrentClipBounds"
+            },
+            {
+              "kind": "method",
+              "name": "isTimestampInBounds",
+              "parameters": [
+                {
+                  "name": "timestamp"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleClick",
+              "parameters": [
+                {
+                  "name": "evt"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "mediaCurrentTimeSet"
+            },
+            {
+              "kind": "method",
+              "name": "mediaUnsetCallback",
+              "parameters": [
+                {
+                  "name": "media"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "enableThumbnails"
+            },
+            {
+              "kind": "method",
+              "name": "disableThumbnails"
+            },
+            {
+              "kind": "field",
+              "name": "draggingEl",
+              "type": {
+                "text": "null"
+              },
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "wrapper",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "selection",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "playhead",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "leftTrim",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "spacerFirst",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "startHandle",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "spacerMiddle",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "endHandle",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "spacerLast",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_clickHandler"
+            },
+            {
+              "kind": "field",
+              "name": "_dragStart"
+            },
+            {
+              "kind": "field",
+              "name": "_dragEnd"
+            },
+            {
+              "kind": "field",
+              "name": "_drag"
+            }
+          ],
+          "events": [
+            {
+              "type": {}
+            }
+          ],
+          "attributes": [
+            {
+              "name": "thumbnails"
+            }
+          ],
+          "superclass": {
+            "module": "src/js/extras/media-clip-selector/index.js"
+          },
+          "tagName": "media-clip-selector",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "media-clip-selector",
+          "declaration": {
+            "name": "MediaClipSelector",
+            "module": "src/js/extras/media-clip-selector/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "MediaClipSelector",
+            "module": "src/js/extras/media-clip-selector/index.js"
+          }
+        }
+      ]
+    }
+  ],
+  "package": {
+    "name": "media-chrome",
+    "description": "Custom elements (web components) for making audio and video player controls that look great in your website or app.",
+    "version": "0.19.0",
+    "author": "@muxinc",
+    "homepage": "https://github.com/muxinc/media-chrome#readme",
+    "license": "MIT"
+  }
+}
