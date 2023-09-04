@@ -985,8 +985,8 @@ const mimes = {
   zirz: 'application/vnd.zul',
   zmm: 'application/vnd.handheld-entertainment+xml'
 }
-const types = Object.create(null); values(mimes).map(v=>mimes[k].
-/^[^\/]*\//
-.exec(e).shift());
+const types = Object.create(null); values(mimes).map(v=>mimes[k]. /^[^\/]*\// .exec(e).shift());
+
 Object.entries(mimes).forEach(ent=>console.log(ent));
-for (let ext in mimes) mimes[ext].split(/\//).pop().concat(ext).join(/\//)
+
+for (let ext in mimes) mimes[ext].split(/\//).pop().concat(ext).join(/\//)  
