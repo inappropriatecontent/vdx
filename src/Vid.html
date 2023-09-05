@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+                margin: 1px;
+                background: black;
+            }
+
+            body>* {
+                /* transition: outline 2s ease-out; */
+            }
+
+            :focus-visible:is(.sel) {
+                outline: thin rgb(255 255 0 / 90%) solid !important;
+            }
+
+            :focus-visible :not(.sel) {
+                outline: none !important;
+            }
+
+            dialog {
+                width: fit-content;
+                font-family: sans-serif;
+                position: fixed;
+                left: 50%;
+                top: 5%;
+                text-align: center;
+                font-weight: bolder;
+                margin: 0;
+                border: none;
+                border-radius: 5%;
+                color: rgb(255 255 0/.9);
+                background: rgb(0 0 0 / 0.7);
+            }
+
+            progress {
+                opacity: 0.2;
+                accent-color: darkslateblue;
+            }
+
+            progress[bar] {
+                opacity: 1;
+            }
+
+            #caption {
+                /*         filter:opacity(.8); */
+                display: none;
+                /*         width: fit-content;
+        font-family: sans-serif;
+        position: fixed;
+        left: 5%;
+        top: 5%;
+        text-align: center;
+        font-weight: bolder;
+        margin: 0;
+        border: none;
+        border-radius: 5%;
+        color: rgb(255 255 0/.9);
+        background: rgb(0 0 0 / 0.7);
+        transition: all 2s ease-out; */
+            }
+
+            /* #caption.open {
+            filter: blur(0.2);
+        }
+
+        #caption:not(.open) {
+            filter: opacity(0); */
+            /* } */
+        </style>
+        <script defer="true" src="vid.js"></script>
+        <!--     <script defer="true" src="mvid.js"></script> -->
+    </head>
+    <body>
+        <video id="v" tabindex="1"></video>
+        <br>
+        <progress value="0" max="0"></progress>
+        <dialog></dialog>
+    </body>
+</html>
